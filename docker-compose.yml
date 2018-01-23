@@ -1,0 +1,7 @@
+version: '3'
+services:
+  queue:
+    image: rabbitmq:3-management
+    hostname: queue
+    ports: 
+      - 9080:15672
