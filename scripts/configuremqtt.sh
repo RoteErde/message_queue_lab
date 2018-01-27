@@ -1,5 +1,11 @@
 #!/bin/bash
-cat "mqtt.default_user     = guest\
+touch /etc/rabbitmq/rabbitmq.conf 
+echo "loopback_users.guest = false\
+listeners.tcp.default = 5672\
+hipe_compile = false\
+management.listener.port = 15672\
+management.listener.ssl = false\
+mqtt.default_user     = guest\
 mqtt.default_pass     = guest\
 mqtt.allow_anonymous  = true\
 mqtt.vhost            = /\
