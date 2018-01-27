@@ -1,4 +1,5 @@
 FROM rabbitmq:3.7.2-management
+RUN apt-get update && apt-get install -y net-tools
 RUN rabbitmq-plugins enable --offline rabbitmq_mqtt
 
 RUN echo 'NODENAME=rabbit@localhost' >> /etc/rabbitmq/rabbitmq-env.conf
@@ -8,4 +9,5 @@ RUN echo 'NODENAME=rabbit@localhost' >> /etc/rabbitmq/rabbitmq-env.conf
 #CMD /usr/lib/rabbitmq/bin/rabbitmqctl set_user_tags mqtt-test management
 
 
-EXPOSE 1883 1883
+EXPOSE 1883 
+EXPOSE 15672
