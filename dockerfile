@@ -9,7 +9,7 @@ RUN echo 'NODENAME=rabbit@localhost' >> /etc/rabbitmq/rabbitmq-env.conf
 #CMD /usr/lib/rabbitmq/bin/rabbitmqctl set_user_tags mqtt-test management
 COPY scripts/configuremqtt.sh /usr/local/bin
 RUN chmod +x /usr/local/bin/configuremqtt.sh
-RUN /usr/local/bin/configuremqtt.sh
+ENTRYPOINT  /usr/local/bin/configuremqtt.sh
 
 
 EXPOSE 1883 
