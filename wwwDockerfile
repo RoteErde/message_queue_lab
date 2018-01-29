@@ -1,0 +1,8 @@
+FROM alpine:3.3
+
+
+#obtain env variables here
+
+#pull binary artifact here
+
+#custom scripts here

@@ -5,3 +5,9 @@ services:
     hostname: queue
     ports: 
       - 9080:15672
+  web:
+   build: ./webmiddleware
+   hostname: www
+   ports:
+      - 8080:8080
+    
